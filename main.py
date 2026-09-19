@@ -1,6 +1,4 @@
 import requests
-from fake_useragent import UserAgent
-ua = UserAgent()
 
 subdoms = []
 target = "torn.com"
@@ -11,7 +9,7 @@ def subdomains():
 	with open("subdomains.txt", "r") as file:
 		wordlist = file.read().splitlines()
 	headers = {
-		"User-Agent": ua.random
+		"User-Agent": Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36
 	}
 	for item in wordlist:
 		try:
