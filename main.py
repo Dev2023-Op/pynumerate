@@ -1,7 +1,7 @@
 import requests
 
 subdoms = []
-target = "torn.com"
+target = sys.argv[1]
 
 def subdomains():
 	global subdoms
