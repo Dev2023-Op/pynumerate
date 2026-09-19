@@ -1,4 +1,5 @@
 import requests
+import sys
 
 subdoms = []
 target = sys.argv[1]
@@ -13,7 +14,7 @@ def subdomains():
 	}
 	for item in wordlist:
 		try:
-			r = requests.request(method="GET", url="https://" + item + "." + target, headers=headers)
+			r = requests.request(method="GET", url="https://" + item + "." + target, headers=headers, timeout=0.5)
 		except requests.exceptions.RequestException:
 			pass
 		try:
@@ -26,3 +27,4 @@ def subdomains():
 		r = ""
 
 subdomains()
+exit()
