@@ -5,6 +5,7 @@ osint tool for web applications
 ## Success criteria
 
 - [x] enumerates subdomains
-- [ ] enumerates common directorys & files
+
+~~- [ ] enumerates common directorys & files~~
 - [ ] checks subdomains for amazon s3
-- [ ] choses a random useragent at startup
+- [x] choses a random useragent at startup
