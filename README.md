@@ -25,5 +25,6 @@ sudo python3 -m venv .venv
 source .venv/bin/activate
 ```
 ```sh
+sudo chown -R $USER .venv
 sudo pip install requests
 ```
