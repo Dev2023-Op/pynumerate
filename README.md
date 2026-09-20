@@ -20,6 +20,8 @@ This tool is intended for legal and ethical use only. The contributors and or ow
 ```sh
 sudo git clone https://github.com/Dev2023-Op/pynumerate.git && cd pynumerate
 sudo python3 -m venv .venv
+```
+```sh
 source .venv/bin/activate
 ```
 ```sh
