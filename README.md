@@ -18,5 +18,5 @@ This tool is intended for legal and ethical use only. The contributors and or ow
 - curl
 
 ```sh
-curl https://github.com/Dev2023-Op/pynumerate/blob/main/install.sh | sudo bash
+curl https://raw.githubusercontent.com/Dev2023-Op/pynumerate/refs/heads/main/install.sh | sudo bash
 ```
