@@ -25,4 +25,5 @@ curl https://raw.githubusercontent.com/Dev2023-Op/pynumerate/refs/heads/main/ins
 
 ```sh
 pynumerate <target url>
+# make sure you remove the http/https part aswell as the www part unless your targeting that subdomain
 ```
