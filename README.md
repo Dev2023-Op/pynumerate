@@ -26,5 +26,5 @@ source .venv/bin/activate
 ```
 ```sh
 sudo chown -R $USER .venv
-sudo pip install requests
+pip install requests
 ```
