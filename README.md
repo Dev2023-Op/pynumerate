@@ -20,3 +20,9 @@ This tool is intended for legal and ethical use only. The contributors and or ow
 ```sh
 curl https://raw.githubusercontent.com/Dev2023-Op/pynumerate/refs/heads/main/install.sh | sudo bash
 ```
+
+## Usage
+
+```sh
+pynumerate <target url>
+```
