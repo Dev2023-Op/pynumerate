@@ -18,19 +18,5 @@ This tool is intended for legal and ethical use only. The contributors and or ow
 - curl
 
 ```sh
-sudo git clone https://github.com/Dev2023-Op/pynumerate.git && cd pynumerate
-sudo python3 -m venv .venv
-```
-```sh
-source .venv/bin/activate
-```
-```sh
-sudo chown -R $USER .venv
-pip install requests
-```
-
-## Usage
-
-```sh
-python3 main.py <target url>
+curl https://github.com/Dev2023-Op/pynumerate/blob/main/install.sh | sudo bash
 ```
