@@ -5,7 +5,11 @@ import subprocess
 subdoms = []
 dirs = []
 buckets = []
-target = sys.argv[1]
+try:
+	target = sys.argv[1]
+except IndexError:
+	print("your missing the url. check https://github.com/Dev2023-Op/pynumerate/blob/main/README.md#usage for more information")
+	exit()
 
 def subdomains():
 	global subdoms
