@@ -28,3 +28,9 @@ source .venv/bin/activate
 sudo chown -R $USER .venv
 pip install requests
 ```
+
+## Usage
+
+```sh
+python3 main.py <target url>
+```
