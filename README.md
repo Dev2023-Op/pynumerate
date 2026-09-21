@@ -11,6 +11,7 @@ Pynumerate finds:
 - [ ] must have modules
 - [ ] must have module detection
 - [ ] must have a search interface
+- [ ] must have a store
 
 ## Disclaimer
 This tool is intended for legal and ethical use only. The contributors and or owner of this repository will not cover or recive publicity for consequences caused by this tool.
