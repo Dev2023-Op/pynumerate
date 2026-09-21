@@ -7,11 +7,9 @@ Pynumerate finds:
 - s3 buckets
 
 ## Success Criteria
-- [ ] must use a shell like interface
-- [ ] must have modules
-- [ ] must have module detection
+- [x] must use a shell like interface https://docs.python.org/3/library/cmd.html
+- [x] must have modules
 - [ ] must have a search interface
-- [ ] must have a store
 
 ## Disclaimer
 This tool is intended for legal and ethical use only. The contributors and or owner of this repository will not cover or recive publicity for consequences caused by this tool.
