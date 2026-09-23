@@ -31,12 +31,15 @@ def subdomains():
 		try:
 			r = requests.request(method="GET", url="https://" + item + "." + target, headers=headers, timeout=0.5)
 		except requests.exceptions.RequestException:
-			pass
+			try:
+				r = requests.request(method="GET", url="http://" + item + "." + target, headers=headers, timeout=0.5)
+			except requests.exceptions.RequestException:
+				pass
 		try:
 			
 			if r != "":
 				if "404" not in r:
-					print(f"[*] Subdomain Found: https://{item}.{target}")
+					print(f"[*] Subdomain Found: {item}.{target}")
 					subdoms.append(f"{item}.{target}")
 		except UnboundLocalError as e:
 			pass
@@ -72,6 +75,11 @@ def s3():
 		result = subprocess.run(cmd, capture_output=True, text=True, shell=True)
 		if "ERROR" not in result.stdout:
 			print(f"[*] S3 bucket found: s3://{item}")
+
+if target.startswith("https://"):
+    clean_url = url.removeprefix("https://")
+elif target.startswith("http://"):
+    clean_url = url.removeprefix("http://")
 
 subdomains()
 s3()

@@ -39,7 +39,12 @@ class Console(cmd.Cmd):
 					print("You are missing opptions. enter help if you need it")
 			finally:
 				sys.argv = original_args
-			
+		elif args[0] == "list":
+			modules.list()
+		elif args[0] == "help":
+			modules.help()
+		else:
+			modules.list()
 		
 if __name__ == '__main__':
 	Console().cmdloop()
