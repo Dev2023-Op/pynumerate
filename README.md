@@ -22,8 +22,11 @@ curl https://raw.githubusercontent.com/Dev2023-Op/pynumerate/refs/heads/main/ins
 ```
 
 ## Usage
-
+To start:
 ```sh
-pynumerate <target url>
-# make sure you remove the http/https part aswell as the www part unless your targeting that subdomain
+pynumerate
+```
+For more information:
+```sh
+(pynumerate)> help
 ```
