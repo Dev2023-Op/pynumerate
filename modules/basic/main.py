@@ -8,14 +8,21 @@ buckets = []
 try:
 	target = sys.argv[1]
 except IndexError:
-	print("your missing the url. check https://github.com/Dev2023-Op/pynumerate/blob/main/README.md#usage for more information")
-	exit()
+	target = input("Whats the URL your testing? ")
+	#exit()
 
 def subdomains():
 	global subdoms
 	global target
-	with open("subdomains.txt", "r") as file:
-		wordlist = file.read().splitlines()
+	try:
+		with open("modules/basic/subdomains.txt", "r") as file:
+			wordlist = file.read().splitlines()
+	except FileNotFoundError:
+		try:
+			with open("subdomains.txt", "r") as file:
+				wordlist = file.read().splitlines()
+		except FileNotFoundError:
+			print("[ERROR] subdomains wordlist not found")
 	subdoms.append(target)
 	headers = {
 		"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36"
@@ -65,8 +72,11 @@ def s3():
 		result = subprocess.run(cmd, capture_output=True, text=True, shell=True)
 		if "ERROR" not in result.stdout:
 			print(f"[*] S3 bucket found: s3://{item}")
-	
 
 subdomains()
 s3()
-exit()
+
+if __name__ == "__main__":
+	subdomains()
+	s3()
+	exit()
