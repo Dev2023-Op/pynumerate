@@ -6,11 +6,6 @@ Pynumerate finds:
 - subdomains
 - s3 buckets
 
-## Success Criteria
-- [x] must use a shell like interface https://docs.python.org/3/library/cmd.html
-- [x] must have modules
-- [ ] must list modules when prompted
-
 ## Disclaimer
 This tool is intended for legal and ethical use only. The contributors and or owner of this repository will not cover or recive publicity for consequences caused by this tool.
 
