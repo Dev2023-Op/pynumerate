@@ -10,7 +10,7 @@ def help():
 	print("If i wanted to run a basic scan on example.target i would run modules use basic example.target")
 
 def list():
-	items = os.listdir("modules/")
+	items = os.listdir(os.path.dirname(os.path.abspath(__file__)) + "/modules/")
 	for item in items:
 		print(item)
 
