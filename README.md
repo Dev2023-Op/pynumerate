@@ -20,12 +20,12 @@ This tool is intended for legal and ethical use only. The contributors and or ow
 - curl
 
 ```sh
-curl https://raw.githubusercontent.com/Dev2023-Op/pynumerate/refs/heads/main/install.sh | sudo bash
+curl https://raw.githubusercontent.com/Dev2023-Op/pynumerate/refs/heads/main/install.sh | bash
 ```
 
 ## Updateing
 ```sh
-curl https://raw.githubusercontent.com/Dev2023-Op/pynumerate/refs/heads/main/update.sh | sudo bash
+curl https://raw.githubusercontent.com/Dev2023-Op/pynumerate/refs/heads/main/update.sh | bash
 ```
 
 ## Usage
