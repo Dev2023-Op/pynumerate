@@ -26,7 +26,8 @@ class Console(cmd.Cmd):
 			original_args = sys.argv
 			try:
 				try:
-					script = "modules/" + args[1] + "/main.py"
+					dir = os.path.dirname(os.path.abspath(__file__))
+					script = dir + "/modules/" + args[1] + "/main.py"
 					sys.argv = [script]
 					i = 0
 					for item in args:
