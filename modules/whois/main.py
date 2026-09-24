@@ -10,7 +10,10 @@ def main():
 		scan = whois.whois(target)
 	except whois.exceptions.WhoisError:
 		print("Invalid URL")
-	print(scan)
+	try:
+		print(scan)
+	except UnboundLocalError:
+		pass
 
 main()
 
