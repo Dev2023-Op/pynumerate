@@ -73,8 +73,7 @@ def s3():
 	for item in subdoms:
 		cmd = "aws s3 ls s3://" + item + " --no-sign-request"
 		result = subprocess.run(cmd, capture_output=True, text=True, shell=True)\
-		output = result.sdout + result.sderr
-		if "ERROR" not in output:
+		if "ERROR" not in result.stdout and "ERROR" not in result.stderr:
 			print(f"[*] S3 bucket found: s3://{item}")
 
 if target.startswith("https://"):
