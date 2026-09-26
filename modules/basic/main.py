@@ -80,11 +80,18 @@ if target.startswith("https://"):
     clean_url = url.removeprefix("https://")
 elif target.startswith("http://"):
     clean_url = url.removeprefix("http://")
-
-subdomains()
-s3()
-
-if __name__ == "__main__":
+try:
 	subdomains()
 	s3()
+except KeyboardInterrupt:
+	print()
+	print("exiting")
+
+if __name__ == "__main__":
+	try:
+		subdomains()
+		s3()
+	except KeyboardInterrupt:
+		print()
+		print("exiting")
 	exit()
