@@ -72,7 +72,7 @@ def s3():
 	global subdoms
 	for item in subdoms:
 		cmd = "aws s3 ls s3://" + item + " --no-sign-request"
-		result = subprocess.run(cmd, capture_output=True, text=True, shell=True)\
+		result = subprocess.run(cmd, capture_output=True, text=True, shell=True)
 		if "ERROR" not in result.stdout and "ERROR" not in result.stderr:
 			print(f"[*] S3 bucket found: s3://{item}")
 
