@@ -88,10 +88,10 @@ except KeyboardInterrupt:
 	print("exiting")
 
 if __name__ == "__main__":
-	#try:
-	subdomains()
-	s3()
-	#except KeyboardInterrupt:
-	#	print()
-	#	print("exiting")
+	try:
+		subdomains()
+		s3()
+	except KeyboardInterrupt:
+		print()
+		print("exiting")
 	exit()
