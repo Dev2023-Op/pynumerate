@@ -51,4 +51,5 @@ if __name__ == '__main__':
 	try:
 		Console().cmdloop()
 	except KeyboardInterrupt:
+		print()
 		print("exiting")
