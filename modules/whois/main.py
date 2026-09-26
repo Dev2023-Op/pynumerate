@@ -14,8 +14,15 @@ def main():
 		print(scan)
 	except UnboundLocalError:
 		pass
-
-main()
+try:
+	main()
+except KeyboardInterrupt:
+	print()
+	print("exiting")
 
 if __name__ == "__main__":
-	main()
+	try:
+		main()
+	except KeyboardInterrupt:
+		print()
+		print("exiting")
