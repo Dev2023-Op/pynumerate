@@ -48,4 +48,7 @@ class Console(cmd.Cmd):
 			modules.list()
 		
 if __name__ == '__main__':
-	Console().cmdloop()
+	try:
+		Console().cmdloop()
+	except KeyboardInterrupt:
+		print("exiting")
