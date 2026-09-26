@@ -37,4 +37,4 @@ for item in wordlist:
 				subdoms.append(f"{item}.{target}")
 	except UnboundLocalError as e:
 		pass
-		r = ""
+	r = ""
