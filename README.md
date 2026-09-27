@@ -17,6 +17,7 @@ This tool is intended for legal and ethical use only. The contributors and or ow
 ### Requirements
 - python3
 - python3-pip
+- aws cli
 - git
 - curl
 
