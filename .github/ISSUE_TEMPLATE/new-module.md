@@ -1,8 +1,8 @@
 ---
-name: Add to store
+name: New module
 about: This issue is for requesting your module to be added to the store
-title: Add to store
-type: Feature
+title: New module:
+type: module
 
 ---
 
