@@ -6,7 +6,12 @@ type: Feature
 
 ---
 
-## Module Purpose
+| Item | Answer |
+|---|---|
+| Purpose of your module | |
+| Repository link | |
+| PIP packages that need to be installed | |
+
 
 ## Requirements
 - [ ] written in python
