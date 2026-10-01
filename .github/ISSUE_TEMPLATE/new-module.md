@@ -17,3 +17,7 @@ type: module
 - [ ] written in python
 - [ ] works on Linux
 - [ ] not a duplicate
+- [ ] asks for an input if a flag is not received
+- [ ] has a install script
+- [ ] installs into the /usr/lib/pynumerate/modules folder
+
