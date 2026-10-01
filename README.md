@@ -8,6 +8,7 @@ Pynumerate is a osint tool for web applications.<br>
 - [Disclaimer](#disclaimer)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Modules](#modules)
 
 ## Disclaimer
 This tool is intended for legal and ethical use only. The contributors and or owner of this repository will not cover or recive publicity for consequences caused by this tool.
@@ -39,3 +40,15 @@ For more information:
 ```sh
 (pynumerate)> help
 ```
+
+## Modules
+
+pynumerate runs on modules witch are small programs that assist your program.
+
+### Preinstalled modules
+| Module | Function |
+|---|---|
+| Basic | Perform a subdomain scan then scan those subdomains for public s3 |
+| subdomains | Enumerate common subdomains |
+| s3 | check a domain or subdomain for s3 |
+| whois | Retrive whois data for a website |
