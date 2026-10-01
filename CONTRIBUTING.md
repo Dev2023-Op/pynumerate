@@ -6,4 +6,4 @@ Maintainers of this repository reserve the right to rollback, reject, report cha
 
 ## Module creation
 
-If you are creating a module please see (module creation)[module_creation.md]
+If you are creating a module please see [module creation](module_creation.md)
