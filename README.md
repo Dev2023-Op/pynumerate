@@ -1,6 +1,6 @@
 # pynumerate
 
-Pynumerate is a osint tool for web applications.<br>
+Pynumerate is a osint tool for web applications that brings most of your scans into one tool. This skips out on the endless tool switching.<br>
 ![Static Badge](https://img.shields.io/badge/Supported_OS-Linux-red?style=for-the-badge)
 ![Endpoint Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fghloc.dev%2Fapi%2FDev2023-Op%2Fpynumerate%2Fbadge&style=for-the-badge&color=red)
 
