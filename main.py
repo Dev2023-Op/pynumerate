@@ -21,14 +21,6 @@ class Console(cmd.Cmd):
 		print("\nExiting")
 		exit()
 	
-	def do_basic(self, arg):
-		sys.argv = [script, arg]
-		original_args = sys.argv
-		script = "modules/basic/main.py"
-		sys.argv = original_args
-		
-		runpy.run_path(script)
-	
 	def do_modules(self, arg):
 		"""Access the module function\nType modules help for more information"""
 		args = arg.split()
