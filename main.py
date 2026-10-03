@@ -4,6 +4,14 @@ import sys
 import modules
 from colours import RED, GREEN, YELLOW, BLUE, BOLD, RESET
 import runpy
+import random
+
+def art():
+	files = os.listdir(os.path.dirname(os.path.abspath(__file__)) + "/resources/art/")
+	choice = random.choice(files)
+	with open(choice, "r") as file:
+		print(file.read)
+	
 
 class Console(cmd.Cmd):
 	prompt = f"{GREEN}({RED}pynumerate{GREEN})> {RESET}"
