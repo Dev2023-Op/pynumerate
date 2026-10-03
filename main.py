@@ -8,9 +8,9 @@ import random
 
 def art():
 	files = os.listdir(os.path.dirname(os.path.abspath(__file__)) + "/resources/art/")
-	choice = random.choice(files)
+	choice = os.path.dirname(os.path.abspath(__file__)) + "/resources/art/" + random.choice(files)
 	with open(choice, "r") as file:
-		print(file.read)
+		print(RED + file.read() + RESET)
 	
 
 class Console(cmd.Cmd):
@@ -62,4 +62,4 @@ if __name__ == '__main__':
 		Console().cmdloop()
 	except KeyboardInterrupt:
 		print()
-		print("{RESET}exiting")
+		print(f"{RESET}exiting")
