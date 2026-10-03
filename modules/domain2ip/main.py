@@ -1,4 +1,5 @@
 import socket
+import sys
 from colours import RED, GREEN, YELLOW, BLUE, BOLD, RESET
 
 try:
