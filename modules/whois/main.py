@@ -1,28 +1,29 @@
 import whois
 import sys
+from colours import RED, GREEN, YELLOW, BLUE, BOLD, RESET
 
 def main():
 	try:
 		target = sys.argv[1]
 	except IndexError:
-		target = input("Whats the target URL? ")
+		target = input(f"{BLUE}Whats the target URL? {RESET}")
 	try:
 		scan = whois.whois(target)
 	except whois.exceptions.WhoisError:
-		print("Invalid URL")
+		print(f"{YELLOW}[*] Invalid URL")
 	try:
-		print(scan)
+		print(GREEN + scan + RESET)
 	except UnboundLocalError:
 		pass
 try:
 	main()
 except KeyboardInterrupt:
 	print()
-	print("exiting")
+	print(f"{RESET}exiting")
 
 if __name__ == "__main__":
 	try:
 		main()
 	except KeyboardInterrupt:
 		print()
-		print("exiting")
+		print(f"{RESET}exiting")
