@@ -1,5 +1,6 @@
 import sys
 import requests
+from colours import RED, GREEN, YELLOW, BLUE, BOLD, RESET
 
 subdoms = []
 
