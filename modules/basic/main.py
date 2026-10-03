@@ -1,6 +1,7 @@
 import requests
 import sys
 import subprocess
+from colours import RED, GREEN, YELLOW, BLUE, BOLD, RESET
 
 subdoms = []
 dirs = []
@@ -8,7 +9,7 @@ buckets = []
 try:
 	target = sys.argv[1]
 except IndexError:
-	target = input("Whats the URL your testing? ")
+	target = input(f"{BLUE}Whats the URL your testing? {RESET}")
 	#exit()
 
 def subdomains():
@@ -22,7 +23,7 @@ def subdomains():
 			with open("subdomains.txt", "r") as file:
 				wordlist = file.read().splitlines()
 		except FileNotFoundError:
-			print("[ERROR] subdomains wordlist not found")
+			print(f"{YELLOW}[*] subdomains wordlist not found{RESET}")
 	subdoms.append(target)
 	headers = {
 		"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36"

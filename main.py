@@ -2,10 +2,19 @@ import cmd
 import os
 import sys
 import modules
+from colours import RED, GREEN, YELLOW, BLUE, BOLD, RESET
 import runpy
+import random
+
+def art():
+	files = os.listdir(os.path.dirname(os.path.abspath(__file__)) + "/resources/art/")
+	choice = os.path.dirname(os.path.abspath(__file__)) + "/resources/art/" + random.choice(files)
+	with open(choice, "r") as file:
+		print(RED + file.read() + RESET)
+	
 
 class Console(cmd.Cmd):
-	prompt = "(pynumerate)> "
+	prompt = f"{GREEN}({RED}pynumerate{GREEN})> {RESET}"
 	
 	def do_exit(self, arg):
 		print("\nExiting")
@@ -37,7 +46,7 @@ class Console(cmd.Cmd):
 							sys.argv.append(item)
 					runpy.run_path(script)
 				except IndexError:
-					print("You are missing opptions. enter help if you need it")
+					print(f"{YELLOW}[*] You are missing opptions. enter help if you need it{RESET}")
 			finally:
 				sys.argv = original_args
 		elif args[0] == "list":
@@ -49,7 +58,8 @@ class Console(cmd.Cmd):
 		
 if __name__ == '__main__':
 	try:
+		art()
 		Console().cmdloop()
 	except KeyboardInterrupt:
 		print()
-		print("exiting")
+		print(f"{RESET}exiting")
