@@ -42,4 +42,4 @@ try:
 
 except KeyboardInterrupt:
 	print()
-	print("exiting)
+	print(f"{RESET}exiting")
