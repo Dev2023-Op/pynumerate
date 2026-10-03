@@ -17,6 +17,7 @@ class Console(cmd.Cmd):
 	prompt = f"{GREEN}({RED}pynumerate{GREEN})> {RESET}"
 	
 	def do_exit(self, arg):
+		"""Exit pynumerate"""
 		print("\nExiting")
 		exit()
 	
@@ -29,6 +30,7 @@ class Console(cmd.Cmd):
 		runpy.run_path(script)
 	
 	def do_modules(self, arg):
+		"""Access the module function\nType modules help for more information"""
 		args = arg.split()
 		
 		if args[0] == "use":
