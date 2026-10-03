@@ -16,7 +16,7 @@ try:
 			with open("subdomains.txt", "r") as file:
 				wordlist = file.read().splitlines()
 		except FileNotFoundError:
-			print("[ERROR] subdomains wordlist not found")
+			print(f"{YELLOW}[*] subdomains wordlist not found{RESET}")
 	subdoms.append(target)
 	headers = {
 		"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36"
