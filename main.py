@@ -2,10 +2,11 @@ import cmd
 import os
 import sys
 import modules
+from colours import RED, GREEN, YELLOW, BLUE, BOLD, RESET
 import runpy
 
 class Console(cmd.Cmd):
-	prompt = "(pynumerate)> "
+	prompt = f"{GREEN}({RED}pynumerate{GREEN})> {RESET}"
 	
 	def do_exit(self, arg):
 		print("\nExiting")
@@ -37,7 +38,7 @@ class Console(cmd.Cmd):
 							sys.argv.append(item)
 					runpy.run_path(script)
 				except IndexError:
-					print("You are missing opptions. enter help if you need it")
+					print(f"{YELLOW}[*] You are missing opptions. enter help if you need it{RESET}")
 			finally:
 				sys.argv = original_args
 		elif args[0] == "list":
@@ -52,4 +53,4 @@ if __name__ == '__main__':
 		Console().cmdloop()
 	except KeyboardInterrupt:
 		print()
-		print("exiting")
+		print("{RESET}exiting")
