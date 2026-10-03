@@ -7,7 +7,7 @@ subdoms = []
 try:
 	target = sys.argv[1]
 except IndexError:
-	target = input("Whats the URL your testing? ")
+	target = input(f"{BLUE}Whats the URL your testing? {RESET}")
 try:
 	try:
 		with open("modules/basic/subdomains.txt", "r") as file:
