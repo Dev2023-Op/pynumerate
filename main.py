@@ -2,9 +2,9 @@ import cmd
 import os
 import sys
 import modules
-from colours import RED, GREEN, YELLOW, BLUE, BOLD, RESET
 import runpy
 import random
+from colours import RED, GREEN, YELLOW, BLUE, BOLD, RESET
 
 def art():
 	files = os.listdir(os.path.dirname(os.path.abspath(__file__)) + "/resources/art/")
