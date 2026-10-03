@@ -10,7 +10,6 @@ except IndexError:
 try:
   ip = socket.gethostbyname(target)
   print(f"{GREEN}[*] IP found: {ip}{RESET}")
-  print()
   info = socket.getaddrinfo(target, 0)
   for item in info:
     print(f"{GREEN}[*] IP found: {ip}{RESET}")
