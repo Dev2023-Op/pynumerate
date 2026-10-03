@@ -58,6 +58,7 @@ class Console(cmd.Cmd):
 		
 if __name__ == '__main__':
 	try:
+		art()
 		Console().cmdloop()
 	except KeyboardInterrupt:
 		print()
