@@ -34,7 +34,7 @@ try:
 	
 			if r != "":
 				if "404" not in r:
-					print(f"[*] Subdomain Found: {item}.{target}")
+					print(f"{GREEN}[*] Subdomain Found: {item}.{target}{RESET}")
 					subdoms.append(f"{item}.{target}")
 		except UnboundLocalError as e:
 			pass
