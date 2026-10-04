@@ -52,3 +52,5 @@ pynumerate runs on modules witch are small programs that assist your program.
 | subdomains | Enumerate common subdomains |
 | s3 | check a domain or subdomain for s3 |
 | whois | Retrive whois data for a website |
+| domain2ip| Retrive a domains host ip |
+| ip2domain| Retrive a host ip's domain |
