@@ -7,5 +7,6 @@ source .venv/bin/activate
 sudo chown -R $USER .venv
 pip install requests
 pip install python-whois
+pip install bs4
 sudo mv pynumerate /usr/bin/
 sudo chmod +x /usr/bin/pynumerate
