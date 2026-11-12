@@ -1,0 +1,49 @@
+import requests
+import sys
+from colours import RED, GREEN, YELLOW, BLUE, BOLD, RESET
+
+response = ""
+
+try:
+	target = sys.argv[1]
+except IndexError:
+	target = input(f"{BLUE}Whats the URL your testing? {RESET}")
+
+headers = {
+    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36"
+}
+
+def wp():
+    global headers
+    global target
+    r = requests.request("GET", target, headers=headers, timeout=0.5)
+    content = r.text
+    if "w.org" in content:
+        print(f"{GREEN}[*] The target is likely using WordPress{RESET}")
+
+def main():
+    global target
+    if "http://" not in target.lower() and "https://" not in target.lower():
+        if input("HTTP or HTTPS?").lower() == "http":
+            target = "http://" + target
+        elif input("HTTP or HTTPS?").lower() == "https":
+            target = "https://" + target
+        else:
+            print("invalid input")
+            exit()
+            
+    wp()
+        
+try:
+	main()
+except KeyboardInterrupt:
+	print()
+	print("exiting")
+
+if __name__ == "__main__":
+	try:
+		main()
+	except KeyboardInterrupt:
+		print()
+		print("exiting")
+	exit()
