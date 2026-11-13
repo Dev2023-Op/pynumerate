@@ -15,14 +15,14 @@ headers = {
 }
 
 def wp():
-    r = requests.request("GET", target, headers=headers, timeout=0.5)
-    content = r.text
+    global content
     if "w.org" in content:
         print(f"{GREEN}[*] The target is likely using WordPress{RESET}")
 
 def drupal():
+    global content
     if "(https://www.drupal.org)" in content:
-        print(f"{GREEN}[*] The target is likely using WordPress{RESET}")
+        print(f"{GREEN}[*] The target is likely using Drupal{RESET}")
 
 def main():
     global headers
@@ -43,7 +43,7 @@ def main():
     content = r.text
             
     wp()
-        
+    drupal()
 try:
 	main()
 except KeyboardInterrupt:
