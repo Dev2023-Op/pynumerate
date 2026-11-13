@@ -2,7 +2,8 @@ import requests
 import sys
 from colours import RED, GREEN, YELLOW, BLUE, BOLD, RESET
 
-response = ""
+r = ""
+content = ""
 
 try:
 	target = sys.argv[1]
@@ -14,15 +15,21 @@ headers = {
 }
 
 def wp():
-    global headers
-    global target
     r = requests.request("GET", target, headers=headers, timeout=0.5)
     content = r.text
     if "w.org" in content:
         print(f"{GREEN}[*] The target is likely using WordPress{RESET}")
 
+def drupal():
+    if "(https://www.drupal.org)" in content:
+        print(f"{GREEN}[*] The target is likely using WordPress{RESET}")
+
 def main():
+    global headers
     global target
+    global r
+    global content
+    
     if "http://" not in target.lower() and "https://" not in target.lower():
         if input("HTTP or HTTPS?").lower() == "http":
             target = "http://" + target
@@ -31,6 +38,9 @@ def main():
         else:
             print("invalid input")
             exit()
+            
+    r = requests.request("GET", target, headers=headers, timeout=5)
+    content = r.text
             
     wp()
         
