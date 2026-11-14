@@ -44,6 +44,14 @@ def gtm():
     if "https://www.googletagmanager.com/gtm.js" in content:
         print(f"{GREEN}[*] The target is using Google Tag Manager{RESET}")
 
+def cloudflare():
+    global r
+    try:
+        if r.headers["Server"] == "cloudflare":
+            print(f"{GREEN}[*] The target is using Cloudflare{RESET}")
+    except KeyError:
+        pass
+
 def main():
     global headers
     global target
