@@ -38,12 +38,13 @@ class Console(cmd.Cmd):
 							i += 1
 						else:
 							sys.argv.append(item)
-                    try:
-        				runpy.run_path(script)
-                    except SystemExit as e:
-                        pass
+                    
 				except IndexError:
 					print(f"{YELLOW}[*] You are missing opptions. enter help if you need it{RESET}")
+				try:
+					runpy.run_path(script)
+				except SystemExit as e:
+					pass
 			finally:
 				sys.argv = original_args
 		elif args[0] == "list":
