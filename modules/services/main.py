@@ -29,14 +29,16 @@ def yoast():
     if "This site is optimized with the Yoast SEO plugin" in content:
         print(f"{GREEN}[*] The target is using Yoast SEO{RESET}")
 
-def joomla():
-    global r
-    try:
-        if "Joomla" in r.headers["X-Content-Encoded-By"]:
-            print(f"{GREEN}[*] The target is using Joomla{RESET}")
-    except KeyError:
-        pass
+def shopify():
+    global content
+    if "https://cdn.shopify.com" in content:
+        print(f"{GREEN}[*] The target is using Shopify{RESET}")
 
+def wix():
+    global content
+    if "Wix.com Website Builder" in content:
+        print(f"{GREEN}[*] The target is using Wix{RESET}")
+    
 def gtm():
     global content
     if "https://www.googletagmanager.com/gtm.js" in content:
@@ -73,7 +75,8 @@ def main():
     wp()
     drupal()
     yoast()
-    joomla()
+    shopify()
+    wix()
     gtm()
 try:
 	main()
