@@ -29,6 +29,7 @@ def main():
     global target
     global r
     global content
+    global rHeaders
     
     if "http://" not in target.lower() and "https://" not in target.lower():
         if input("HTTP or HTTPS?").lower() == "http":
@@ -38,9 +39,19 @@ def main():
         else:
             print("invalid input")
             exit()
-            
-    r = requests.request("GET", target, headers=headers, timeout=5)
-    content = r.text
+
+    try:
+        r = requests.request("GET", target, headers=headers, timeout=5)
+    except ReadTimeout:
+        print(f"{RED}[*] Target timed out{RESET}")
+        exit()
+    else:
+        content = r.text
+
+    try:
+        print(f"{GREEN}[*] The target is powered by {r.headers['X-Powered-By']}")
+    except KeyError:
+        pass
             
     wp()
     drupal()
