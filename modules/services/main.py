@@ -29,7 +29,6 @@ def main():
     global target
     global r
     global content
-    global rHeaders
     
     if "http://" not in target.lower() and "https://" not in target.lower():
         if input("HTTP or HTTPS?").lower() == "http":
