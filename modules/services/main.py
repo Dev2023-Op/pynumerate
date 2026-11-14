@@ -68,8 +68,8 @@ def main():
             exit()
 
     try:
-        r = requests.request("GET", target, headers=headers, timeout=5)
-    except ReadTimeout:
+        r = requests.request("GET", target, headers=headers, timeout=0.5)
+    except TimeoutError:
         print(f"{RED}[*] Target timed out{RESET}")
         exit()
     else:
