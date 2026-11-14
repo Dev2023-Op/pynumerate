@@ -17,12 +17,30 @@ headers = {
 def wp():
     global content
     if "w.org" in content:
-        print(f"{GREEN}[*] The target is likely using WordPress{RESET}")
+        print(f"{GREEN}[*] The target is likely WordPress{RESET}")
 
 def drupal():
     global content
     if "(https://www.drupal.org)" in content:
-        print(f"{GREEN}[*] The target is likely using Drupal{RESET}")
+        print(f"{GREEN}[*] The target is using Drupal{RESET}")
+
+def yoast():
+    global content
+    if "This site is optimized with the Yoast SEO plugin" in content:
+        print(f"{GREEN}[*] The target is using Yoast SEO{RESET}")
+
+def joomla():
+    global r
+    try:
+        if "Joomla" in r.headers["X-Content-Encoded-By"]:
+            print(f"{GREEN}[*] The target is using Joomla{RESET}")
+    except KeyError:
+        pass
+
+def gtm():
+    global content
+    if "https://www.googletagmanager.com/gtm.js" in content:
+        print(f"{GREEN}[*] The target is using Google Tag Manager{RESET}")
 
 def main():
     global headers
@@ -54,6 +72,9 @@ def main():
             
     wp()
     drupal()
+    yoast()
+    joomla()
+    gtm()
 try:
 	main()
 except KeyboardInterrupt:
