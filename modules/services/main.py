@@ -69,7 +69,7 @@ def main():
 
     try:
         r = requests.request("GET", target, headers=headers, timeout=0.5)
-    except TimeoutError:
+    except:
         print(f"{RED}[*] Target timed out{RESET}")
         exit()
     else:
