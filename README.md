@@ -54,3 +54,4 @@ pynumerate runs on modules witch are small programs that assist your program.
 | domain2ip | Retrive a domains host ip |
 | ip2domain | Retrive a host ip's domain |
 | enumpage | find common pages and directorys |
+| services | service detection |
