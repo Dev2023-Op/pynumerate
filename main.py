@@ -38,7 +38,10 @@ class Console(cmd.Cmd):
 							i += 1
 						else:
 							sys.argv.append(item)
-					runpy.run_path(script)
+                    try:
+        				runpy.run_path(script)
+                    except SystemExit as e:
+                        pass
 				except IndexError:
 					print(f"{YELLOW}[*] You are missing opptions. enter help if you need it{RESET}")
 			finally:
