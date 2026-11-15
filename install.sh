@@ -9,4 +9,5 @@ pip install requests
 pip install python-whois
 pip install bs4
 sudo mv pynumerate /usr/bin/
-sudo chmod +x /usr/bin/pynumerate
+sudo chmod 777 /usr/bin/pynumerate
+sudo chmod -R a+rX /usr/lib/pynumerate/
