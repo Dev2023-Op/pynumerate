@@ -21,11 +21,25 @@ This tool is intended for legal and ethical use only. The contributors and or ow
 - git
 - curl
 
+### Installing the latest supported version
+1. Click on releases
+2. go to the first option that contains the tag Latest
+3. download the installer or updater
+4. run it as a shell file with ```sudo bash your-installer-file```
+
+To run pynumerate after installation run:
+```sh
+pynumerate
+```
+
+### Supported versions
+Pynumerate is still in its development phase
+
+### Installing and Updateing unreleased versions
 ```sh
 curl https://raw.githubusercontent.com/Dev2023-Op/pynumerate/refs/heads/main/install.sh | bash
 ```
 
-## Updateing
 ```sh
 curl https://raw.githubusercontent.com/Dev2023-Op/pynumerate/refs/heads/main/update.sh | bash
 ```
