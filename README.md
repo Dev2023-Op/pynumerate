@@ -33,7 +33,7 @@ pynumerate
 ```
 
 ### Supported versions
-Pynumerate is still in its development phase
+- Version 1.1
 
 ### Installing and Updateing unreleased versions
 ```sh
