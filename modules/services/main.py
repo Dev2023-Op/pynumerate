@@ -41,7 +41,7 @@ def wix():
     
 def gtm():
     global content
-    if "https://www.googletagmanager.com/gtm.js" in content:
+    if "https://www.googletagmanager.com/gtm.js" in content or "<!-- Google Tag Manager -->" in content:
         print(f"{GREEN}[*] The target is using Google Tag Manager{RESET}")
 
 def cloudflare():
@@ -51,6 +51,24 @@ def cloudflare():
             print(f"{GREEN}[*] The target is using Cloudflare{RESET}")
     except KeyError:
         pass
+
+def handlebars():
+    global content
+    if "text/x-handlebars-template" in content:
+        print(f"{GREEN}[*] The target is using handlebars{RESET}")
+
+def apple_login():
+    if "appleid-signin-client-id" in content:
+        print(f"{GREEN}[*] The target is using sign in with apple{RESET}")
+
+def jquery():
+    if "jquery" in content:
+        if "jquery.ui" in content:
+            print(f"{GREEN}[*] The target is using jQuery and jQuery-UI{RESET}")
+
+def sentry():
+    if "sentry-trace" in content:
+        print(f"{GREEN}[*] The target is using sentry{RESET}")
 
 def main():
     global headers
@@ -86,6 +104,10 @@ def main():
     shopify()
     wix()
     gtm()
+    handlebars()
+    apple_login()
+    jquery()
+
 try:
 	main()
 except KeyboardInterrupt:
