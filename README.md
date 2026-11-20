@@ -36,6 +36,7 @@ pynumerate
 - Version 1.1
 
 ### Installing and Updateing unreleased versions
+⚠️ WARNING ⚠️ Only use the below if you are confident in using unsupported versions
 ```sh
 curl https://raw.githubusercontent.com/Dev2023-Op/pynumerate/refs/heads/main/install.sh | bash
 ```
