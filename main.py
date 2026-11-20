@@ -53,6 +53,11 @@ class Console(cmd.Cmd):
 			modules.help()
 		else:
 			modules.list()
+
+	def do_clear(self, arg):
+		"""Clear the terminal"""
+		print("\033[H\033[2J", end="")
+
 		
 if __name__ == '__main__':
 	try:
