@@ -3,6 +3,10 @@
 Pynumerate is a osint tool for web applications that brings most of your scans into one tool. This skips out on the endless tool switching.<br>
 ![Static Badge](https://img.shields.io/badge/Supported_OS-Linux-red?style=for-the-badge)
 
+## Feature Poll
+
+The next release is version 1.2, if you would like to vote on a feature to be added please go to https://github.com/Dev2023-Op/pynumerate/discussions/24
+
 ## Contents
 - [Disclaimer](#disclaimer)
 - [Installation](#installation)
