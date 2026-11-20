@@ -22,7 +22,21 @@ class Console(cmd.Cmd):
 		exit()
 	
 	def do_modules(self, arg):
-		"""Access the module function\nType modules help for more information"""
+		"""
+		usage:
+			modules [command] [options]
+
+		subcommands:
+			list:
+				list the installed modules
+				eg: modules list
+			use:
+				use a installed module
+				eg: modules use [module] [options]
+			help:
+				display this
+				eg: modules help
+		"""
 		args = arg.split()
 		
 		if args[0] == "use":
