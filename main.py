@@ -34,8 +34,8 @@ class Console(cmd.Cmd):
 				use a installed module
 				eg: modules use [module] [options]
 			help:
-				display this
-				eg: modules help
+				get the help page of a module
+				eg: modules help [module]
 		"""
 		args = arg.split()
 		
@@ -64,7 +64,10 @@ class Console(cmd.Cmd):
 		elif args[0] == "list":
 			modules.list()
 		elif args[0] == "help":
-			modules.help()
+			try:
+				modules.help(args[1])
+			except KeyError:
+				print("Usage: modules help [module]")
 		else:
 			modules.list()
 
