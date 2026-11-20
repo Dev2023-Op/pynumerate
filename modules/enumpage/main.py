@@ -8,7 +8,7 @@ except IndexError:
 	target = input(f"{BLUE}Whats the URL your testing? {RESET}")
 try:
 	try:
-		with open("modules/dirs&files/common.txt", "r") as file:
+		with open("modules/enumpage/common.txt", "r") as file:
 			wordlist = file.read().splitlines()
 	except FileNotFoundError:
 		try:
@@ -16,7 +16,6 @@ try:
 				wordlist = file.read().splitlines()
 		except FileNotFoundError:
 			print(f"{YELLOW}[*] wordlist not found{RESET}")
-	subdoms.append(target)
 	headers = {
 		"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36"
 	}
