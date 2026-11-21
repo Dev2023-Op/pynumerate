@@ -1,0 +1,3 @@
+finds a ip related to a domain
+usage:
+	modules use domain2ip [target]

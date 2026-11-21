@@ -1,0 +1,3 @@
+searches the target for a weak s3 bucket
+usage:
+	modules use s3 example.target

@@ -1,0 +1,3 @@
+performs a basic automated scan on the target
+usage:
+	modules use basic [target]

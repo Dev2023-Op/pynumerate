@@ -1,0 +1,3 @@
+searches the target for common subdomains
+usage:
+	modules use subdomains example.target

@@ -1,0 +1,3 @@
+displays whois search results
+usage:
+	modules use whois https://example.target

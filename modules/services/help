@@ -1,0 +1,3 @@
+searches a website for common services
+usage:
+	modules use services https://example.target
