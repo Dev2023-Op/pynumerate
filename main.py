@@ -66,7 +66,7 @@ class Console(cmd.Cmd):
 		elif args[0] == "help":
 			try:
 				modules.help(args[1])
-			except KeyError:
+			except IndexError:
 				print("Usage: modules help [module]")
 		else:
 			modules.list()
