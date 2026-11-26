@@ -54,21 +54,29 @@ def cloudflare():
 
 def handlebars():
     global content
-    if "text/x-handlebars-template" in content:
+    if "text/x-handlebars-template" in content or "https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js" in content:
         print(f"{GREEN}[*] The target is using handlebars{RESET}")
 
 def apple_login():
+    global content
     if "appleid-signin-client-id" in content:
         print(f"{GREEN}[*] The target is using sign in with apple{RESET}")
 
 def jquery():
+    global content
     if "jquery" in content:
         if "jquery.ui" in content:
             print(f"{GREEN}[*] The target is using jQuery and jQuery-UI{RESET}")
 
 def sentry():
+    global content
     if "sentry-trace" in content:
         print(f"{GREEN}[*] The target is using sentry{RESET}")
+
+def unpkg():
+    global content
+    if "https://unpkg.com" in content:
+        print(f"{GREEN}[*] The target is using unpkg{RESET}")
 
 def main():
     global headers
@@ -107,6 +115,8 @@ def main():
     handlebars()
     apple_login()
     jquery()
+    sentry()
+    unpkg()
 
 try:
 	main()
